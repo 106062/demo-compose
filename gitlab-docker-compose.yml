@@ -3,7 +3,7 @@ version: '2'
 services:
   redis:
     restart: always
-    image: redis:6.2.1
+    image: redis:6.2.7
     command:
     - --loglevel warning
     volumes:
@@ -22,7 +22,7 @@ services:
 
   gitlab:
     restart: always
-    image: sameersbn/gitlab:14.7.2
+    image: sameersbn/gitlab:15.1.5
     depends_on:
     - redis
     - postgresql
