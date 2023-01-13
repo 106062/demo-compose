@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  postgresql:
+    restart: always
+    image: postgres:13
+    volumes:
+    - /home/postgresql:/data
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=
