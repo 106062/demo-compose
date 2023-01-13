@@ -3,7 +3,7 @@ version: '2'
 services:
   postgresql:
     restart: always
-    image: postgres:13
+    image: postgres:14.6
     volumes:
     - /home/postgresql:/data
     environment:
