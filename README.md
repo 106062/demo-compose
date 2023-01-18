@@ -21,4 +21,7 @@ $ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 $ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 $ source ~/.profile
 
+// change timezone
+$ timedatectl list-timezones
+$ timedatectl set-timezone ${timezone}
 ```
