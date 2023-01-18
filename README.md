@@ -17,4 +17,8 @@ $ chmod +x /usr/local/bin/docker-compose
 
 $ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
+// nvm
+$ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+$ source ~/.profile
+
 ```
