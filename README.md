@@ -31,4 +31,4 @@ $ timedatectl set-timezone ${timezone}
 ``` cmd
 /etc/gitlab/initial_root_password
 ```
-(https://chrislee0728.medium.com/%E5%BB%BA%E7%BD%AE-gitlab-%E7%89%88%E6%8E%A7%E5%B7%A5%E5%85%B7-5fe047330e91)[use LDAP]
+- [use LDAP](https://chrislee0728.medium.com/%E5%BB%BA%E7%BD%AE-gitlab-%E7%89%88%E6%8E%A7%E5%B7%A5%E5%85%B7-5fe047330e91)
