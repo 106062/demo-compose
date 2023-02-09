@@ -2,7 +2,7 @@ version: "3"
 
 services:
   jenkins:
-    image: jenkins/jenkins:2.263.3-lts
+    image: jenkins/jenkins:2.375.3-lts-jdk11
     container_name: jenkins-compose
     restart: always
     ports:
@@ -11,6 +11,9 @@ services:
     volumes:
       - "/home/jenkins:/var/jenkins_home"
     environment:
-      - JAVA_OPTS=-Duser.timezone=Asia/Taipei
+      - TZ=Asia/Taipei
       - JAVA_OPTS=-Dfile.encoding=UTF-8
       - JAVA_OPTS=-Xmx4096m
+    extra_hosts:
+     - "hostname:IP"
+     
