@@ -2,7 +2,7 @@ version: '3.2'
 services:
 
   gitlab:
-    image: gitlab/gitlab-ce:15.7.6-ce.0
+    image: gitlab/gitlab-ce:16.4.0-ce.0
     hostname: 127.0.0.1
     container_name: gitlab
     restart: always
