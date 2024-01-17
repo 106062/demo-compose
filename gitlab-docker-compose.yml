@@ -7,20 +7,27 @@ services:
     command:
     - --loglevel warning
     volumes:
-    - /home/gitlab/redis:/var/lib/redis
+    - ./redis:/var/lib/redis
 
   postgresql:
     restart: always
-    image: postgres:15.4 #sameersbn/postgresql:12-20200524
+    image: postgres:15.4
     volumes:
     - /home/gitlab/postgresql:/data
     environment:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=
-    # - DB_USER=gitlab
-    # - DB_PASS=
-    # - DB_NAME=db_gitlab
-    # - DB_EXTENSION=pg_trgm
+
+  postgresql2:
+    restart: always
+    image: sameersbn/postgresql:12-20200524
+    volumes:
+    - ./postgresql2:/data
+    environment:
+    - DB_USER=gitlab
+    - DB_PASS=
+    - DB_NAME=db_gitlab
+    - DB_EXTENSION=pg_trgm
 
   gitlab:
     restart: always
