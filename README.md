@@ -32,3 +32,19 @@ $ timedatectl set-timezone ${timezone}
 /etc/gitlab/initial_root_password
 ```
 - [use LDAP](https://chrislee0728.medium.com/%E5%BB%BA%E7%BD%AE-gitlab-%E7%89%88%E6%8E%A7%E5%B7%A5%E5%85%B7-5fe047330e91)
+
+## sample opensuse
+
+``` bash
+ $ zypper remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine \
+                  runc
+ $ opensuse_repo="https://download.opensuse.org/repositories/security:/SELinux/openSUSE_Factory/security:SELinux.repo"
+ $ sudo zypper addrepo $opensuse_repo
+```
