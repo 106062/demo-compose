@@ -48,3 +48,15 @@ $ timedatectl set-timezone ${timezone}
  $ opensuse_repo="https://download.opensuse.org/repositories/security:/SELinux/openSUSE_Factory/security:SELinux.repo"
  $ sudo zypper addrepo $opensuse_repo
 ```
+---
+suse install docker 
+``` bash
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+dnf install docker-ce
+systemctl enable --now docker
+
+
+curl -L "https://github.com/docker/compose/releases/download/2.26.1/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
+mv docker-compose /usr/local/bin && sudo chmod +x /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
